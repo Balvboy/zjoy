@@ -1,8 +1,8 @@
-package zhou.utils.file;
+package zjoy.utils.file;
 
 import java.io.IOException;
 
-import zhou.utils.UtilInterface;
+import zjoy.utils.UtilInterface;
 
 public interface FileInterface extends UtilInterface {
 

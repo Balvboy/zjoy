@@ -1,4 +1,4 @@
-package zhou.research.innerClass;
+package zjoy.research.innerClass;
 
 public class Bird {
 

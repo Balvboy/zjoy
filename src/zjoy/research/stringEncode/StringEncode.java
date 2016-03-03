@@ -1,4 +1,4 @@
-package zhou.research.stringEncode;
+package zjoy.research.stringEncode;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

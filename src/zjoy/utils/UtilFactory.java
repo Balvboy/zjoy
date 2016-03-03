@@ -1,9 +1,9 @@
-package zhou.utils;
+package zjoy.utils;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 
-import zhou.utils.file.FileInterface;
+import zjoy.utils.file.FileInterface;
 
 public class UtilFactory<T> {
 

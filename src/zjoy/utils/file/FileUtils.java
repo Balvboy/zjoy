@@ -1,11 +1,11 @@
-package zhou.utils.file;
+package zjoy.utils.file;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import zhou.utils.TimeCount;
+import zjoy.utils.TimeCount;
 
 public class FileUtils implements FileInterface {
 

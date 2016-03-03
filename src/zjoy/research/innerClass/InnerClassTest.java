@@ -1,4 +1,4 @@
-package zhou.research.innerClass;
+package zjoy.research.innerClass;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
