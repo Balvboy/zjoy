@@ -42,7 +42,6 @@ public class FileUtils implements FileInterface {
 				output.close();
 			}
 		}
-		long end = System.currentTimeMillis(); 
 	}
 	
 	/**
