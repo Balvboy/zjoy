@@ -16,4 +16,6 @@ public interface AvatarAbstractFactory {
 	
 	public void skinColor();
 	
+	public void desc();
+	
 }

@@ -12,4 +12,14 @@ package zjoy.research.design_pattern.factory_pattern.abstractFactory;
  */
 public class Person {
 
+	private AvatarAbstractFactory avatar;
+	
+	public Person (AvatarAbstractFactory avatar){
+		this.avatar = avatar;
+	}
+	
+	
+	public void myStyle(){
+		avatar.desc();
+	}
 }
