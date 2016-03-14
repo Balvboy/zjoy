@@ -1,7 +1,9 @@
 package zjoy.utils.handler;
 
  import java.lang.reflect.InvocationHandler;
- import java.lang.reflect.Method;
+import java.lang.reflect.Method;
+
+import zjoy.utils.annotation.TimeCount;
 
  /**
  * 实现在方法调用前后向控制台输出两句字符串
@@ -11,11 +13,15 @@ package zjoy.utils.handler;
  */
  public class TimeCountHandler implements InvocationHandler{
     //要代理的原始对象
-     private Object obj;
+    private Object obj;
     
     public TimeCountHandler(Object obj) {
         super();
         this.obj = obj;
+    }
+    
+    static class InnerClass{
+    	//public static TimeCountHandler  countHandler = new TimeCountHandler(obj);
     }
 
     /**

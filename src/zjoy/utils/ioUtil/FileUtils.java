@@ -1,11 +1,11 @@
-package zjoy.utils.file;
+package zjoy.utils.ioUtil;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import zjoy.utils.TimeCount;
+import zjoy.utils.annotation.TimeCount;
 
 public class FileUtils implements FileInterface {
 

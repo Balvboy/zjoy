@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+    http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+    http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+	<!-- 扫描所有的@后的注解，生成对应的bean -->
+	<context:component-scan base-package="zjoy.*">
+	</context:component-scan>
+	
+    <task:annotation-driven/>
+
+	<bean id="myAop" class="zjoy.research.spring.aop.MyAopInterceptor"></bean>
+	<bean id="myClass" class="zjoy.research.spring.aop.MyClass"></bean>
+	
+	<aop:config proxy-target-class="true">  
+        <aop:aspect id="aspect" ref="myAop">  
+        <!--  
+         第一个*代表所有的返回值类型  第二个*代表所有的类 第三个*代表类所有方法 最后一个..代表所有的参数  
+         -->  
+            <aop:pointcut expression="execution(* zjoy..*.*(..))" id="pointcut"/>  
+            <aop:before method="doBefore" pointcut-ref="pointcut"/>  
+            <aop:after method="doAfter" pointcut-ref="pointcut"/>  
+            <aop:around method="doAround" pointcut-ref="pointcut"/>  
+            <aop:after-throwing method="doThrowing" throwing="ex" pointcut-ref="pointcut"/>  
+        </aop:aspect>  
+    </aop:config>  
+</beans>

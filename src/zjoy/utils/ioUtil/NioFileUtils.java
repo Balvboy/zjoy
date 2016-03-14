@@ -1,4 +1,4 @@
-package zjoy.utils.file;
+package zjoy.utils.ioUtil;
 
 import java.io.File;
 import java.io.FileInputStream;
