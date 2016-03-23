@@ -8,7 +8,7 @@ package zjoy.research.design_pattern.factory_pattern.abstractFactory;
  * @date 2016年3月4日 上午10:08:27 
  * @author zhouyang
  */
-public class SuperManStyle implements AvatarAbstractFactory {
+public class SuperManStyleFactory implements AvatarAbstractFactory {
 
 	@Override
 	public void hairStyle() {

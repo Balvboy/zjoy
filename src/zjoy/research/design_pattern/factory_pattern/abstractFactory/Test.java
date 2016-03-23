@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		Person person = new Person(new SuperManStyle());
+		Person person = new Person(new SuperManStyleFactory());
 		person.myStyle();
 		
 	}
