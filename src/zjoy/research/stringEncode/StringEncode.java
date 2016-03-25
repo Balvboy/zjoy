@@ -6,12 +6,13 @@ public class StringEncode {
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		
-			
+		char c = 'a';
 		
+		int i = (int)c;
 		
+		int j = 99;
 		
-//		的撒打算
-		
-		
+
+		System.out.println(i);
 	}
 }
