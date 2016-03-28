@@ -1,4 +1,4 @@
-package zjoy.research.thread;
+package zjoy.research.encode;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
