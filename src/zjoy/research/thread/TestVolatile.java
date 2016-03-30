@@ -1,8 +1,11 @@
 package zjoy.research.thread;
 
+import java.util.Hashtable;
+
 public class TestVolatile {
 
-	private static volatile boolean flag = true;
+	private static  boolean flag = true;
+	private static int a = 0;
 	
 	
 	public static void main(String[] args) throws InterruptedException {
@@ -11,7 +14,8 @@ public class TestVolatile {
 			
 			public void run(){
 				while(flag){
-					//System.out.println("running");
+					System.out.println("running");
+					
 				}
 			}
 		};
@@ -21,7 +25,6 @@ public class TestVolatile {
 		Thread.sleep(1000);
 		
 		flag = false;
-		
 		
 	}
 	
