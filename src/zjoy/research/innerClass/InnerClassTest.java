@@ -5,6 +5,12 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 public class InnerClassTest {
+	
+	static {
+		
+		String test2 = "abc";
+		
+	}
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		
@@ -17,7 +23,6 @@ public class InnerClassTest {
 		System.out.println(URLDecoder.decode("东方闪电", "iso8859-1"));
 		
 		System.out.println(new String("东方闪电".getBytes("UTF-8"),"gbk"));
-		
 		
 	}
 }
