@@ -7,6 +7,6 @@ public class TestSingleton {
 		SinglePatternWithStaticInnerClass single1 = SinglePatternWithStaticInnerClass.getSinglePatternInstance();
 		SinglePatternWithStaticInnerClass single2 = SinglePatternWithStaticInnerClass.getSinglePatternInstance();
 		
-		System.out.println(single1.equals( single2));
+		System.out.println(single1==single2);
 	}
 }

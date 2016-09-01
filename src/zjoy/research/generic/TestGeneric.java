@@ -6,9 +6,8 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
-import org.springframework.context.annotation.Bean;
 
 public class TestGeneric {
 
@@ -25,9 +24,12 @@ public class TestGeneric {
 	
 	
 	
-//	public void test(List<>){
-//		
-//	}
+	public void test(List<Object> list){
+		
+		for(Object obj : list){
+			String str = (String)obj;
+		}
+	}
 	
 	private static Class getClass(Type type, int i) {     
         if (type instanceof ParameterizedType) { // 处理泛型类型     
